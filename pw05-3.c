@@ -2,13 +2,10 @@
 int main(void)
 {
 	int n;
-	while (1)
+	printf("Введите N: ");
+	scanf("%d", &n);
+	while (n > 0)
 	{
-		printf("Введите N: ");
-		if (scanf("%d", &n) != 1 || n <= 0)
-		{
-			break;
-		}
 		double sum = 0.0;
 		for (int i = 1; i <= n; i++)
 		{
@@ -16,6 +13,8 @@ int main(void)
 			sum += term;
 		}
 		printf("SUM: %.6f\n", sum);
+		printf("Введите N: ");
+		scanf("%d", &n);
 	}
 	return 0;
 }
